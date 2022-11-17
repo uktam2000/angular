@@ -3,63 +3,10 @@
     {
       "id": 1,
       "email": "wfm@mail.ru",
-      "password": "12345678",
+      "password": "12345678", 
       "name": "Администратор"
-    },
-    {
-      "email": "ksskss@mail.ru",
-      "password": "123222",
-      "name": "nnbjhbhj",
-      "id": 2
-    },
-    {
-      "email": "test1@mail.ru",
-      "password": "126452",
-      "name": "Uktamjohn",
-      "id": 3
-    },
-    {
-      "email": "test1@mail.ru",
-      "password": "dsssssss",
-      "name": "dwedfwef",
-      "id": 4
-    },
-    {
-      "email": "test1@mail.ru",
-      "password": "tgutyut",
-      "name": "utuuu",
-      "id": 5
-    },
-    {
-      "email": "mkkjjjkjs@mail.ru",
-      "password": "66556555",
-      "name": "jygtyfyt",
-      "id": 6
-    },
-    {
-      "email": "wfm@mail.ru",
-      "password": "tttttttttttty",
-      "name": "tr6yry",
-      "id": 7
-    },
-    {
-      "email": "ksskss@mail.ru",
-      "password": "dsdwewefrewf",
-      "name": "ewfewfew",
-      "id": 8
-    },
-    {
-      "email": "test1@mail.ru",
-      "password": "56565556",
-      "name": "iouyyhio",
-      "id": 9
-    },
-    {
-      "email": "test1@mail.ru",
-      "password": "dfvdfbvds",
-      "name": "fdbdf",
-      "id": 10
     }
+    
   ],
   "bill": {
     "value": 100000,
