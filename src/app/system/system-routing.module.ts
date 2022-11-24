@@ -8,6 +8,7 @@ import { RecordsPageComponent } from './records-page/records-page.component';
 
 const routes: Routes = [
     {path: 'system', component: SystemComponent, children: [
+        {path: '', redirectTo:'system/bill', pathMatch:'full'},
         {path: 'bill', component: BillPageComponent},
         {path: 'history', component: HistoryPageComponent},
         {path: 'planning', component: PlanningPageComponent},

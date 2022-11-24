@@ -53,7 +53,6 @@ window.setTimeout(()=>{
 
   onSubmit(){
     const formData = this.form.value;
-     console.log(formData)
     this.userService.getUserByEmail(formData.email)
     .subscribe((user: User)=>{ 
       console.log('sub', user);
@@ -62,7 +61,7 @@ window.setTimeout(()=>{
           this.message.text = ''
           window.localStorage.setItem("user", JSON.stringify(user))
             this.authService.login()
-            // this.router.navigate([''])
+            this.router.navigate(['/system', 'bill'])
 
          } else{
           this.showMessage({
