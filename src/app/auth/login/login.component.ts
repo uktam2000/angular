@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { fadeStateTrigger } from 'src/app/shared/animations/fade.animation';
 
 
 import { User } from 'src/app/shared/models/user.model';
@@ -11,7 +13,8 @@ import { Message } from '../../shared/models/message.model';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'] 
+  styleUrls: ['./login.component.scss'],
+  animations: [fadeStateTrigger]
 })
 export class LoginComponent implements OnInit {
 form: FormGroup | any
@@ -28,8 +31,16 @@ window.setTimeout(()=>{
     private userService: UsersService, 
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
-     ) { }
+    private route: ActivatedRoute,
+    private title: Title,
+    private meta: Meta
+     ) {
+         title.setTitle('Вход в систему');
+         meta.addTags([
+          {name: 'keywords', content:'логин,вход,система'},
+          {name: 'description', content:'Страница для входа в систему'}
+         ])
+      }
 
   ngOnInit(){ 
     this.message = new Message('dengar', '')
@@ -41,6 +52,11 @@ window.setTimeout(()=>{
          this.showMessage({
           text:'Теперь вы можете зайти в систему',
           type: 'success'
+        })
+       }else if(params['accessDenied']){
+        this.showMessage({
+          text:'Для работы с системой вам нужно залогиниться',
+          type: 'warning'
         })
        }
     })

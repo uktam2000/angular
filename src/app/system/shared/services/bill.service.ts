@@ -1,3 +1,4 @@
+import { Bill } from './../models/bill.model';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
@@ -21,6 +22,10 @@ export class BillService extends BaseApi{
 
     getBill():Observable<any>{
          return this.get('bill')
+   }
+
+   updateBill(bill:Bill):Observable<any>{
+    return this.put('bill',bill)
    }
 
 

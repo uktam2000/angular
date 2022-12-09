@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/shared/services/users.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -11,7 +12,13 @@ import { User } from 'src/app/shared/models/user.model';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor(private usersService: UsersService, private router: Router ) { }
+  constructor(
+    private usersService: UsersService, 
+    private router: Router,
+    private title: Title
+     ) { 
+      title.setTitle('Регистрация')
+     }
   form: FormGroup | any
 
   

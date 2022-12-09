@@ -9,7 +9,7 @@ import { User } from 'src/app/shared/models/user.model';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  date: Date = new Date();
+  date: Date = new Date(); 
 
   user: User | any;
 
